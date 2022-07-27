@@ -1,0 +1,9 @@
+if(window.location.href.includes("Home")) {
+  window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/QRCodes")
+   
+}
+if(window.location.href.includes("QRCodes")) {
+  setTimeout(function() {
+  window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
+  }, 150);
+}
