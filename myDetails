@@ -16,7 +16,7 @@ function getMobileOperatingSystem() {
 if(window.location.href.includes("Home")) {
 window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/MyPayments")   
 }
-if(window.location.href.includes("MemberProfile")) {
+if(window.location.href.includes("MyPayments")) {
   setTimeout(function() {
 if(getMobileOperatingSystem() === 'iOS' ) {
 window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
