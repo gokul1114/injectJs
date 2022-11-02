@@ -18,6 +18,12 @@ window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/MyP
 }
 if(window.location.href.includes("MyPayments")) {
   setTimeout(function() {
+if(getMobileOperatingSystem() === 'iOS' ) {
+window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
+}
+else {
+webview.stopLoading();
 Interface.handleNativeAction(JSON.stringify({"type":"stopLoading", "key":"val"}));
+}
   }, 700);
 }
