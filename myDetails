@@ -14,8 +14,8 @@ function getMobileOperatingSystem() {
 
 if (window.location.href.includes("Home")) {
 
-console.log("Inside redirection");
-console.log("Inside redirection" + window.location.href);
+console.log("Inside redirection 2");
+console.log("Inside redirection " + window.location.href);
   window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/MyPayments");
   
 }
