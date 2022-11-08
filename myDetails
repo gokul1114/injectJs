@@ -13,9 +13,13 @@ function getMobileOperatingSystem() {
 }
 
 if (window.location.href.includes("Home")) {
+
 console.log("Inside redirection");
+console.log("Inside redirection" + window.location.href);
   window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/MyPayments");
+  
 }
+console.log("href" + window.location.href);
 if (window.location.href.includes("MyPayments")) {
 console.log("Inside MyPayments check");
   setTimeout(function () {
