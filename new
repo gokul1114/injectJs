@@ -21,7 +21,7 @@ window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/MyP
 
 console.log("href" + window.location.href);
 
-if (window.location.href.includes("MyPayments")) {
+if (window.location.href.includes("Home")) {
 console.log("Inside MyPayments check");
   setTimeout(function () {
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
@@ -30,16 +30,9 @@ console.log("Inside MyPayments check");
       window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
     }
     else {
-      try {
         console.log("Inside Android");
         Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
-        console.log("After stoploading");
-      }
-      catch(e) {
-        console.log("Inside catch");
-        Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
-      }
-      
+        console.log("After stoploading");     
     }
   }, 700);
 }
