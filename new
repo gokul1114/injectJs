@@ -30,9 +30,16 @@ console.log("Inside MyPayments check");
       window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
     }
     else {
-      console.log("Inside Android");
-      Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
-      console.log("After stoploading");
+      try {
+        console.log("Inside Android");
+        Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
+        console.log("After stoploading");
+      }
+      catch(e) {
+        console.log("Inside catch");
+        Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
+      }
+      
     }
   }, 700);
 }
