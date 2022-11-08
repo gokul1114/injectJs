@@ -20,7 +20,7 @@ console.log("Inside redirection " + window.location.href);
   
 }
 console.log("href" + window.location.href);
-if (window.location.href.includes("MyPayments")) {
+if (window.location.href.includes("Home")) {
 console.log("Inside MyPayments check");
   setTimeout(function () {
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
