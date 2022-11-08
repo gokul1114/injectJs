@@ -1,1 +1,1 @@
-window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
+Interface.handleNativeAction(JSON.stringify({"type":"stopLoading", "key":"val"}));
