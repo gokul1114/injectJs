@@ -12,7 +12,7 @@ function getMobileOperatingSystem() {
   return "unknown";
 }
 
-if (window.location.href.includes("Home")) {
+if (window.location.href.includes("MyPayments")) {
 
 console.log("Inside redirection 2");
 console.log("Inside redirection " + window.location.href);
