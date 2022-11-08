@@ -1,3 +1,4 @@
+var shouldStopLoad = false;
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   if (/windows phone/i.test(userAgent)) {
@@ -16,12 +17,13 @@ if (window.location.href.endsWith("Members/Home")) {
 
 console.log("Inside redirection 2");
 console.log("Inside redirection " + window.location.href);
-window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/Home/MemberProfile";  
+window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/Home/MemberProfile";
+shouldStopLoad = true
 }
 
 console.log("href" + window.location.href);
 
-if (window.location.href.includes("Home")) {
+if (shouldStopLoad) {
 
 console.log("outside to");
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
