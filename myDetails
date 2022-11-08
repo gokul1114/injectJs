@@ -13,7 +13,8 @@ function getMobileOperatingSystem() {
 }
 
 if (window.location.href.includes("Home")) {
-  window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/MyPayments")
+console.log("Inside redirection");
+  window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/MyPayments");
 }
 if (window.location.href.includes("MyPayments")) {
   setTimeout(function () {
