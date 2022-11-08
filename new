@@ -21,8 +21,7 @@ window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/MyP
 
 console.log("href" + window.location.href);
 
-window.addEventListener('popstate', function (event) {
-	if (window.location.href.includes("MyPayments")) {
+if (window.location.href.includes("MyPayments")) {
 console.log("Inside MyPayments check");
   setTimeout(function () {
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
@@ -37,4 +36,3 @@ console.log("Inside MyPayments check");
     }
   }, 700);
 }
-});
