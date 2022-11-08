@@ -21,7 +21,7 @@ window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/Hom
 
 console.log("href" + window.location.href);
 
-if (window.location.href.includes("MemberProfile")) {
+if (window.location.href.includes("Home")) {
 console.log("Inside MyPayments check");
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
     if (getMobileOperatingSystem() === 'iOS') {
