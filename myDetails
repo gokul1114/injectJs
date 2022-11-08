@@ -18,6 +18,7 @@ if (window.location.href.includes("Home")) {
 }
 if (window.location.href.includes("MyPayments")) {
   setTimeout(function () {
+  console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
     if (getMobileOperatingSystem() === 'iOS') {
       window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
     }
