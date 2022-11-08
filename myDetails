@@ -22,7 +22,6 @@ if(getMobileOperatingSystem() === 'iOS' ) {
 window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
 }
 else {
-webview.stopLoading();
 Interface.handleNativeAction(JSON.stringify({"type":"stopLoading", "key":"val"}));
 }
   }, 700);
