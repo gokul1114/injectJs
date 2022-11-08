@@ -23,7 +23,6 @@ console.log("href" + window.location.href);
 
 if (window.location.href.includes("Home")) {
 console.log("Inside MyPayments check");
-  setTimeout(function () {
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
     if (getMobileOperatingSystem() === 'iOS') {
       console.log("Inside IOS");
@@ -34,5 +33,4 @@ console.log("Inside MyPayments check");
         Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
         console.log("After stoploading");     
     }
-  }, 1000);
 }
