@@ -9,7 +9,7 @@ function getMobileOperatingSystem() {
   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
     return "iOS";
   }
-  return "unknown";
+  return "unknown1";
 }
 
 if (window.location.href.endsWith("Members/Home")) {
