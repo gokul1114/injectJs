@@ -12,7 +12,7 @@ function getMobileOperatingSystem() {
   return "unknown";
 }
 
-if (window.location.href.includes("MyPayments")) {
+if (window.location.href.includes("Home")) {
 
 console.log("Inside redirection 2");
 console.log("Inside redirection " + window.location.href);
@@ -20,7 +20,7 @@ window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/MyP
 }
 
 console.log("href" + window.location.href);
-if (window.location.href.includes("Home")) {
+if (window.location.href.includes("MyPayments")) {
 console.log("Inside MyPayments check");
   setTimeout(function () {
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
