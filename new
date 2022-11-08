@@ -22,7 +22,9 @@ window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/Hom
 console.log("href" + window.location.href);
 
 if (window.location.href.includes("Home")) {
-setTimeout(function () {
+
+console.log("outside to");
+setTimeout(() => {
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
     if (getMobileOperatingSystem() === 'iOS') {
       console.log("Inside IOS");
