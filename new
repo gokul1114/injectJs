@@ -16,12 +16,12 @@ if (window.location.href.endsWith("Members/Home")) {
 
 console.log("Inside redirection 2");
 console.log("Inside redirection " + window.location.href);
-window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/Home";  
+window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/Home/MemberProfile";  
 }
 
 console.log("href" + window.location.href);
 
-if (window.location.href.includes("Home")) {
+if (window.location.href.includes("MemberProfile")) {
 console.log("Inside MyPayments check");
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
     if (getMobileOperatingSystem() === 'iOS') {
