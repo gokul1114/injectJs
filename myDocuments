@@ -16,7 +16,7 @@ let os = getMobileOperatingSystem();
 if(window.location.href.endsWith("Members/Home")) {
     stopLoading = true;
     window.location.assign("https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##");
-    stopLoad();
+    window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
 }
 
 function stopLoad() {
