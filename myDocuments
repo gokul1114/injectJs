@@ -11,14 +11,18 @@ function getMobileOperatingSystem() {
   }
   return "unknown";
 }
-
+let stopLoading = false;
 let os = getMobileOperatingSystem();
 if(window.location.href.endsWith("Members/Home")) {
+    stopLoading = true;
     window.location.assign("https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##");
 }
 
-if(window.location.href.includes("MemberDocuments")) {
+if(stopLoading) {
     if(os == "iOS") {
       window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
+    }
+    else {
+      
     }
 }
