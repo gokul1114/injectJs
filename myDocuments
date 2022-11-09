@@ -1,7 +1,9 @@
 if(window.location.href.endsWith("Members/Home")) {
-  window.location.assign("https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##");
+  window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/Home/MemberProfile")
    
 }
-if(window.location.href.includes("MemberDocuments")) {
+if(window.location.href.includes("MemberProfile")) {
+  setTimeout(function() {
   window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
+  }, 150);
 }
