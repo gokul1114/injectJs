@@ -19,8 +19,6 @@ if(window.location.href.endsWith("Members/Home")) {
 }
 
 if(window.location.href.includes("/Home/MemberProfile")) {
-  setTimeout(function() {
   window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
-  }, 150);
 }
 
