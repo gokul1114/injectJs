@@ -15,7 +15,9 @@ console.log("outside to");
   console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
     if (getMobileOperatingSystem() === 'iOS') {
       console.log("Inside IOS");
-      window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
+      setTimeout(function () {
+        window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
+      },150);
     }
     else {
       console.log("Inside Android");
