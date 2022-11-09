@@ -16,10 +16,11 @@ let os = getMobileOperatingSystem();
 if(window.location.href.endsWith("Members/Home")) {
     stopLoading = true;
     window.location.assign("https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##");
+    stopLoad();
 }
 
-if(stopLoading) {
-    if(os == "iOS") {
+function stopLoad() {
+   if(os == "iOS") {
       window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
-    }
+   }
 }
