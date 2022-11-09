@@ -22,7 +22,4 @@ if(stopLoading) {
     if(os == "iOS") {
       window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
     }
-    else {
-      
-    }
 }
