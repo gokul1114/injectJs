@@ -18,12 +18,11 @@ if(window.location.href.endsWith("Members/Home")) {
     window.location.href = "https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##";
 }
 
-if(window.location.href.includes("##TARGET_URL##")) {
-  if(os == "iOS") {
+if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
     window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
-  }
-  else {
+}
+
+if(stopLoading && os != "iOS") {
     Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
-  }
 }
 
