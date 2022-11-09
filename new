@@ -1,5 +1,5 @@
 var shouldStopLoad = false;
-
+var os = getMobileOperatingSystem();
 if (window.location.href.endsWith("Members/Home")) {
 console.log("Inside redirection 2");
 console.log("Inside redirection " + window.location.href);
@@ -10,10 +10,7 @@ shouldStopLoad = true
 console.log("href" + window.location.href);
 
 if (shouldStopLoad) {
-
-console.log("outside to");
-  console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
-    if (getMobileOperatingSystem() === 'iOS') {
+    if (os === 'iOS') {
       console.log("Inside IOS");
       setTimeout(function () {
         window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
