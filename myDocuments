@@ -19,8 +19,9 @@ if(window.location.href.endsWith("Members/Home")) {
     window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
 }
 
-function stopLoad() {
-   if(os == "iOS") {
-      window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
-   }
+if(window.location.href.includes("/Home/MemberProfile")) {
+  setTimeout(function() {
+  window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
+  }, 150);
 }
+
