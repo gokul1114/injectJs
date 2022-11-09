@@ -17,7 +17,7 @@ if (window.location.href.endsWith("Members/Home")) {
 
 console.log("Inside redirection 2");
 console.log("Inside redirection " + window.location.href);
-window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/Home/MemberProfile");
+window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/Home/MemberProfile";
 shouldStopLoad = true
 }
 
