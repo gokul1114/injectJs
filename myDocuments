@@ -22,9 +22,7 @@ if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
     window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
 }
 
-window.addEventListener('popstate', function (event) {
- if(os != "iOS" && window.location.href.includes("Members/Home")) {
+if(os != "iOS" && window.location.href.includes("Members/Home")) {
     Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
-  }
-});
+}
 
