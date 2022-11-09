@@ -1,5 +1,5 @@
 if(window.location.href.endsWith("Members/Home")) {
-  window.location.assign("https://testarea.pfpleisure.org/LhWebTest/en/Members/Home/MemberDocuments");
+  window.location.assign("https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##");
    
 }
 if(window.location.href.includes("MemberDocuments")) {
