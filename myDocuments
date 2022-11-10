@@ -38,6 +38,7 @@ if(window.location.href.endsWith("Members/Home") && os != "iOS") {
 
 if(window.location.href.includes("MemberProfile") && os != "iOS") {
     console.log("inside css block");
+     insertCSS = true;
     let navbar = document.getElementsByTagName('nav')[0];
     if(navbar?.style?.display) {
       navbar.style.cssText = 'display : none !important';
