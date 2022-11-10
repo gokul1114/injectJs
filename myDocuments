@@ -14,13 +14,6 @@ function getMobileOperatingSystem() {
 let stopLoading = false;
 let os = getMobileOperatingSystem();
 
-window.onbeforeunload = function() {
-  if(os != "iOS" && window.location.href.includes("Members/Home")) {
-      body = document.getElementsByTagName('body')[0];
-      body.style.display = "none";
-  }
-}
-
 if(window.location.href.endsWith("Members/Home")) {
     stopLoading = true;
     window.location.href = "https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##";
