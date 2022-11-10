@@ -28,6 +28,7 @@ if(os != "iOS" && stopLoading) {
 }
 
 if(window.location.href.includes("##TARGET_URL##") && os != "iOS") {
+    console.log("inside css block");
     let navbar = document.getElementsByTagName('nav')[0];
     if(navbar?.style?.display) {
       navbar.style.cssText = 'display : none !important'
