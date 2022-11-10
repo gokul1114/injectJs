@@ -33,6 +33,6 @@ if(window.location.href.endsWith("Members/Home") && os != "iOS") {
  }
  
  if(window.location.href.includes("##TARGET_URL##") && os != "iOS") {
-    let navbar = document.getElementsByClassName('xn-navbar')[0];
+    let navbar = document.getElementsByTagName('nav')[0];
     navbar.style.display = "none";
  }
