@@ -20,11 +20,11 @@ if(window.location.href.endsWith("Members/Home")) {
 }
 
 if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
-    Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val", "delay":"3000" }));
+    Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
 }
 
 if(os != "iOS" && stopLoading) {
-    Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
+    Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val", "delay":"3000" }));
 }
 
 
