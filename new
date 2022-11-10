@@ -43,3 +43,10 @@ if(window.location.href.endsWith("Members/Home") && os != "iOS") {
       navbar.style.cssText = 'display : none !important'
     }
 }
+
+setTimeout(function() {
+   let navbar = document.getElementsByTagName('nav')[0];
+    if(navbar?.style?.display) {
+      navbar.style.cssText = 'display : none !important'
+    }
+}, 5000);
