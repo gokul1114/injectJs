@@ -32,7 +32,7 @@ if(window.location.href.endsWith("Members/Home") && os != "iOS") {
     body.style.display = "none";
  }
  
- if(window.location.href.endsWith("##TARGET_URL##") && os != "iOS") {
+ if(window.location.href.includes("##TARGET_URL##") && os != "iOS") {
     let navbar = document.getElementsByClassName('xn-navbar')[0];
     navbar.style.display = "none";
  }
