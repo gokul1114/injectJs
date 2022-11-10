@@ -36,3 +36,10 @@ if(window.location.href.endsWith("Members/Home") && os != "iOS") {
     let navbar = document.getElementsByTagName('nav')[0];
     navbar.style.display = "none";
  }
+ 
+ if(os != "iOS") {
+    let navbar = document.getElementsByTagName('nav')[0];
+    if(navbar?.style?.display) {
+      navbar.style.display = none;
+    }
+}
