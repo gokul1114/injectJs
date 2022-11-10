@@ -28,8 +28,18 @@ if(os != "iOS" && stopLoading) {
 }
 
 if(window.location.href.endsWith("Members/Home") && os != "iOS") {
+    let navbar = document.getElementsByTagName('nav')[0];
+    if(navbar?.style?.display) {
+      navbar.style.display = none;
+    }
+    
     let body = document.getElementsByTagName('body')[0];
     body.style.display = "none";
+    
+    let navbar = document.getElementsByTagName('nav')[0];
+    if(navbar?.style?.display) {
+      navbar.style.display = none;
+    }
  }
  
  if(window.location.href.includes("##TARGET_URL##") && os != "iOS") {
