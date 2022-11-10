@@ -40,11 +40,13 @@ if(window.location.href.endsWith("Members/Home") && os != "iOS") {
  if(window.location.href.includes("##TARGET_URL##") && os != "iOS") {
     let navbar = document.getElementsByTagName('nav')[0];
     navbar.style.display = "none !important";
+    navbar.style.cssText = 'display : none !important'
  }
  
  if(os != "iOS") {
     let navbar = document.getElementsByTagName('nav')[0];
     if(navbar?.style?.display) {
       navbar.style.display = none;
+      navbar.style.cssText = 'display : none !important'
     }
 }
