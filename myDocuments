@@ -15,8 +15,9 @@ let stopLoading = false;
 let os = getMobileOperatingSystem();
 
 window.onbeforeunload = function() {
-  if(os != "iOS") {
-     window.stop();
+  if(os != "iOS" && window.location.href.includes("Members/Home")) {
+      body = document.getElementsByTagName('body')[0];
+      body.style.display = "none";
   }
 }
 
