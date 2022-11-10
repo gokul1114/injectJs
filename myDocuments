@@ -46,8 +46,8 @@ if(window.location.href.includes("MemberProfile") && os != "iOS") {
     }
  }
  window.onload = function() {
-    console.log("inside onload")
-    console.log(window.location.href)
+    console.log("inside onload");
+    console.log(window.location.href);
 }
  if(insertCSS) {
     console.log("inside css block 222");
