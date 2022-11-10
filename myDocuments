@@ -45,10 +45,7 @@ if(window.location.href.includes("MemberProfile") && os != "iOS") {
       navbar.style.cssText = 'display : none !important';
     }
  }
- window.onload = function() {
-    console.log("inside onload");
-    console.log(window.location.href);
-}
+
  if(insertCSS) {
     console.log("inside css block 222");
     let navbar = document.getElementsByTagName('nav')[0];
