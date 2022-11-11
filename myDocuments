@@ -12,14 +12,11 @@ function getMobileOperatingSystem() {
   return "unknown";
 }
 let stopLoading = false;
-let insertCSS = false;
 let os = getMobileOperatingSystem();
 
 if(window.location.href.endsWith("Members/Home")) {
     stopLoading = true;
     window.location.href = "https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##";
-    insertCSS = true;
-    console.log("insertCSS made true");
 }
 
 if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
