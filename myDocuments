@@ -27,4 +27,8 @@ if(os != "iOS" && stopLoading) {
     Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val", "delay":"2000" }));
 }
 
+if(window.location.href.endsWith("Members/Home") && os != "iOS") {    
+    let body = document.getElementsByTagName('body')[0];
+    body.style.display = "none";
+ }
 
