@@ -1,7 +1,3 @@
-document.onload = function(){
-  console.log("hiiiii");
-};
-
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   if (/windows phone/i.test(userAgent)) {
@@ -50,11 +46,4 @@ if(window.location.href.includes("MemberProfile") && os != "iOS") {
     }
  }
 
- if(insertCSS) {
-    console.log("inside css block 222");
-    let navbar = document.getElementsByTagName('nav')[0];
-    if(navbar?.style?.display) {
-      navbar.style.cssText = 'display : none !important';
-    }
- }
 
