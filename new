@@ -16,7 +16,7 @@ let os = getMobileOperatingSystem();
 
 if(window.location.href.endsWith("Members/Home")) {
     stopLoading = true;
-    window.location.href = "https://testarea.pfpleisure.org/LhWebTest/##TARGET_URL##";
+    window.location.href = "##BASE_URL##/##TARGET_URL##";
     setTimeout(function() {
    let navbar = document.getElementsByTagName('nav')[0];
     if(navbar?.style?.display) {
