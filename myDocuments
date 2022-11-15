@@ -16,7 +16,7 @@ let os = getMobileOperatingSystem();
 
 if(window.location.href.endsWith("Members/Home")) {
     stopLoading = true;
-    window.location.href = "##BASE_URL##/##TARGET_URL##";
+    window.location.href = "##TARGET_URL##";
 }
 
 if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
@@ -24,11 +24,10 @@ if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
 }
 
 if(os != "iOS" && stopLoading) {
-    Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val", "delay":"2000" }));
+    Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val", "delay":"3000" }));
 }
 
 if(window.location.href.endsWith("Members/Home") && os != "iOS") {    
     let body = document.getElementsByTagName('body')[0];
     body.style.display = "none";
  }
-
