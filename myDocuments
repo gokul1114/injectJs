@@ -19,7 +19,7 @@ if(window.location.href.includes("Home")) {
     window.location.href = "##TARGET_URL##";
 }
 
-if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
+if(stopLoading && os == "iOS") {
     setTimeout(function () {
         window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
       },150);
