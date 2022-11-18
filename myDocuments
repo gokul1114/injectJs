@@ -11,25 +11,24 @@ function getMobileOperatingSystem() {
   }
   return "unknown";
 }
-let stopLoading = false;
-let os = getMobileOperatingSystem();
 
-if(window.location.href.includes("Home")) {
-    stopLoading = true;
-    window.location.href = "##TARGET_URL##";
+
+
+var stopRedirection = false;
+var os = getMobileOperatingSystem();
+
+if(window.location.href.includes("Home") && !window.location.href.includes("BasketDetails")) {
+  window.location.href = "##TARGET_URL##";
+  stopRedirection = true;
 }
-
-if(stopLoading && os == "iOS") {
-    setTimeout(function () {
+if(stopRedirection) {
+  if (os === 'iOS') {
+      setTimeout(function () {
         window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
       },150);
+    }
+    else {
+      Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
+    }
+    stopRedirection = false;
 }
-
-if(os != "iOS" && stopLoading) {
-    Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val", "delay":"3000" }));
-}
-
-if(window.location.href.endsWith("Members/Home") && os != "iOS") {    
-    let body = document.getElementsByTagName('body')[0];
-    body.style.display = "none";
- }
