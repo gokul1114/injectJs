@@ -28,5 +28,4 @@ if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
 
 if(stopRedirection && os != "iOS") {
   Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
-  stopRedirection = false;
 }
