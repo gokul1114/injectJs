@@ -21,14 +21,12 @@ if(window.location.href.includes("Home") && !window.location.href.includes("Bask
   window.location.href = "##TARGET_URL##";
   stopRedirection = true;
 }
-if(stopRedirection) {
-  if (os === 'iOS') {
-      setTimeout(function () {
-        window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
-      },150);
-    }
-    else {
-      Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
-    }
-    stopRedirection = false;
+
+if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
+    window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
+}
+
+if(stopRedirection && os == "iOS") {
+  Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
+  stopRedirection = false;
 }
