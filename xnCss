@@ -1,0 +1,21 @@
+
+#xn-content > .xn-tile.xn-small.xn-tile-filters {
+    display: none;
+}
+
+#xn-content > .xn-instructions {
+    display: none;
+}
+
+ul.xn-links {
+    display: none;
+}
+
+.xn-memberships-link {
+    display: none;
+}
+
+body {
+    margin-top: 0px !important;
+    padding-bottom: 0px !important;
+}
