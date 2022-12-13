@@ -1,0 +1,16 @@
+.xn-notice-toggle.xn-has-informational {
+    display: none;
+}
+
+button#xn-loginout-button {
+    display: none;
+}
+
+a.xn-navbar-brand {
+    visibility: hidden;
+}
+
+body {
+    margin-top: 0px !important;
+    padding-bottom: 0px !important;
+}
