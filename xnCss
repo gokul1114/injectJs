@@ -1,4 +1,9 @@
 
+nav.xn-navbar, footer
+{
+    display: none;
+}
+
 #xn-content > .xn-tile.xn-small.xn-tile-filters {
     display: none;
 }
