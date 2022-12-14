@@ -14,3 +14,7 @@ body {
     margin-top: 0px !important;
     padding-bottom: 0px !important;
 }
+
+#xn-content > .xn-tile.xn-small.xn-tile-filters {
+    display: none;
+}
