@@ -17,3 +17,11 @@ body {
 #xn-content > .xn-tile.xn-small.xn-tile-filters {
     display: none;
 }
+
+.xn-header {
+    display: none;
+}
+
+div#xn-bookings-order-by-group {
+    display: none;
+}
