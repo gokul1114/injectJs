@@ -1,4 +1,3 @@
-var shouldStopLoad = false;
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   if (/windows phone/i.test(userAgent)) {
@@ -12,28 +11,25 @@ function getMobileOperatingSystem() {
   }
   return "unknown";
 }
+let stopLoading = false;
+let os = getMobileOperatingSystem();
 
-if (window.location.href.endsWith("Members/Home")) {
-
-console.log("Inside redirection 2");
-console.log("Inside redirection " + window.location.href);
-window.location.href = "https://testarea.pfpleisure.org/LhWebTest/en/Members/Home/MemberProfile";
-shouldStopLoad = true
+if(window.location.href.endsWith("Members/Home")) {
+    stopLoading = true;
+    window.location.href = "##BASE_URL##/##TARGET_URL##";
 }
 
-console.log("href" + window.location.href);
-
-if (shouldStopLoad) {
-
-console.log("outside to");
-  console.log('getMobileOperatingSystem()', getMobileOperatingSystem());
-    if (getMobileOperatingSystem() === 'iOS') {
-      console.log("Inside IOS");
-      window.webkit.messageHandlers.handleNativeAction.postMessage({ "type": "stopLoading", "key": "val" });
+if(stopLoading) {
+    if(os == "iOS") {
+      window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
     }
     else {
-      console.log("Inside Android");
-      Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val" }));
-      console.log("After stoploading");
+      Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val", "delay":"3000" }));
     }
+    
 }
+
+if(window.location.href.endsWith("Members/Home")) {    
+    let body = document.getElementsByTagName('body')[0];
+    body.style.display = "none";
+ }
