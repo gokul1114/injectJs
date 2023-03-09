@@ -18,8 +18,8 @@ if(window.location.href.endsWith("Members/Home")) {
     window.location.href = "##BASE_URL##/##TARGET_URL##";
 }
 
-if(window.location.href.includes("##TARGET_URL##") && os != "iOS"){
-  stopLoading = true
+if(window.location.href.includes("##TARGET_URL##")) {
+    stopLoading = true;
 }
 
 if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
