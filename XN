@@ -1,0 +1,36 @@
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  if (/windows phone/i.test(userAgent)) {
+    return "Windows Phone";
+  }
+  if (/android/i.test(userAgent)) {
+    return "Android";
+  }
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    return "iOS";
+  }
+  return "unknown";
+}
+let stopLoading = false;
+let os = getMobileOperatingSystem();
+
+if(window.location.href.endsWith("Members/Home")) {
+    window.location.href = "##BASE_URL##/##TARGET_URL##";
+}
+
+if(window.location.href.includes("##TARGET_URL##")) {
+      stopLoading = true;
+}
+
+if(window.location.href.includes("##TARGET_URL##") && os == "iOS") {
+    window.webkit.messageHandlers.handleNativeAction.postMessage({"type":"stopLoading", "key":"val"});
+}
+
+if(os != "iOS" && stopLoading) {
+    Interface.handleNativeAction(JSON.stringify({ "type": "stopLoading", "key": "val", "delay":"3000" }));
+}
+
+if(window.location.href.endsWith("Members/Home") && os != "iOS") {    
+    let body = document.getElementsByTagName('body')[0];
+    body.style.display = "none";
+ }
